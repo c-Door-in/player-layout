@@ -5,6 +5,10 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
   <style type="text/css">
+    .player-box {
+      width: 800px;
+      height: 600px;
+    }
     .video-container {
       width: 100%;
       height: 100%
@@ -21,11 +25,14 @@
     [hidden] {
       display: none;
     }
+    .player-box-shadow {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 70);
+    }
 
   </style>
 </head>
 <body>
-  <div id="player" style="width: 800px; height: 600px;"> 
+  <div id="player" class="player-box player-box-shadow"> 
     <div class="video-container js-video-container"></div>
     <div class="bottom-buttons-container">
       <button class="js-play-button fa fa-play video-button"></button>
