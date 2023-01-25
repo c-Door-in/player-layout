@@ -12,17 +12,14 @@
     .bottom-buttons-container {
       background-color: black;
     }
-    .play-button {
+    .video-button {
       border-style: hidden;
       cursor: pointer;
       color: white;
       background-color: transparent;
     }
-    .pause-button {
-      border-style: hidden;
-      cursor: pointer;
-      color: white;
-      background-color: transparent;
+    [hidden] {
+      display: none;
     }
 
   </style>
@@ -31,8 +28,8 @@
   <div id="player" style="width: 800px; height: 600px;"> 
     <div class="video-container js-video-container"></div>
     <div class="bottom-buttons-container">
-      <button class="fa fa-play play-button js-play-button" aria-hidden="true"></button>
-      <button class="fa fa-pause pause-button js-pause-button" aria-hidden="true"></button>
+      <button class="js-play-button fa fa-play video-button"></button>
+      <button class="js-pause-button fa fa-pause video-button" hidden></button>
     </div>
   </div>
   
