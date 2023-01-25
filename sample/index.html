@@ -16,6 +16,7 @@
     }
     .bottom-buttons-container {
       background-color: black;
+      display: flex;
     }
     .video-button {
       border-style: hidden;
@@ -34,6 +35,9 @@
     .player-box-shadow {
       box-shadow: 0 0 10px rgba(0, 0, 0, 70);
     }
+    .zaglushka {
+      flex-grow: 1;
+    }
 
   </style>
 </head>
@@ -45,6 +49,8 @@
       <button class="video-button js-pause-button fa fa-pause" hidden></button>
       <button class="video-button js-mute-button fa fa-volume-up"></button>
       <button class="video-button js-volume-button fa fa-volume-off" hidden></button>
+      <div class="zaglushka"></div>
+      <button class="video-button js-fullscreen-button fa fa-expand"></button>
     </div>
   </div>
   
