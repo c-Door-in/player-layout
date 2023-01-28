@@ -69,7 +69,7 @@
     }
     .bottom-container .viewing-control .slider.line {
       background-color: red;
-      border-radius: 1px;
+      border-radius: 2px;
       height: 5px;
     }
     .bottom-container .viewing-control .slider.dot {
@@ -82,6 +82,14 @@
       width: 8px;
       margin: 0 -7px;
       box-shadow: 0 0 3px rgb(255, 255, 255)
+    }
+    .bottom-container .viewing-control .slider.dot.animate {
+      opacity: 0;
+      transition: opacity 300ms ease-out;
+    }
+    .bottom-container .viewing-control:hover .slider.dot.animate {
+      opacity: 1;
+      transition: opacity 300ms ease-in;
     }
     .bottom-container .viewing-control .duration {
       margin-left: auto;
@@ -107,7 +115,7 @@
         <div class="current-time js-current-time"></div>
         <div class="progress-bar js-progress">
           <div class="slider line js-progress-slider"></div>
-          <div class="slider dot"></div>
+          <div class="slider dot animate"></div>
         </div>
         <div class="duration js-duration"></div>
       </div>
