@@ -2,7 +2,8 @@
  Видеоплеер для показа фильмов из архива киностудии.
  
 ### Пример
-Пример видеоплеера доступен по адресу [https://c-door-in.github.io/player-layout/](https://c-door-in.github.io/player-layout/)
+Пример видеоплеера доступен по адресу [https://c-door-in.github.io/player-layout/](https://c-door-in.github.io/player-layout/)  
+---
 ![Пример](https://github.com/c-Door-in/player-layout/blob/main/preview.gif?raw=true)
 
 ## Цели проекта
