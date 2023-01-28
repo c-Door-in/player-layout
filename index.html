@@ -11,6 +11,9 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
   <link rel="stylesheet" href="static/css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style type="text/css">
     .player-box {
       width: 800px;
@@ -21,11 +24,15 @@
     .video-container {
       flex-grow: 1;
     }
-    .bottom-buttons-container {
+    .bottom-container {
       background-color: black;
       display: flex;
+      align-items: center;
     }
-    .video-button {
+    .bottom-container .left-buttons {
+      display: flex;
+    }
+    .bottom-container .button {
       border-style: hidden;
       cursor: pointer;
       color: white;
@@ -42,8 +49,20 @@
     .player-box-shadow {
       box-shadow: 0 0 10px rgba(0, 0, 0, 70);
     }
-    .zaglushka {
+    .bottom-container .viewing-control {
+      display: flex;
       flex-grow: 1;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+    }
+    .bottom-container .viewing-control .current-time {
+      margin: 0 3px;
+    }
+    .bottom-container .viewing-control .dash {
+      margin: 0 5px;
+    }
+    .bottom-container .viewing-control .duration {
+      margin-left: auto;
     }
 
   </style>
@@ -52,12 +71,23 @@
   <div id="player" class="player-box player-box-shadow"> 
     <div class="video-container js-video-container"></div>
     <div class="bottom-buttons-container">
-      <button class="video-button js-play-button fa fa-play"></button>
-      <button class="video-button js-pause-button fa fa-pause" hidden></button>
-      <button class="video-button js-mute-button fa fa-volume-up"></button>
-      <button class="video-button js-volume-button fa fa-volume-off" hidden></button>
-      <div class="zaglushka"></div>
-      <button class="video-button js-fullscreen-button fa fa-expand"></button>
+      
+    </div>
+    <div class="bottom-container">
+      <div class="left-buttons">
+        <button class="button js-play-button fa fa-play"></button>
+        <button class="button js-pause-button fa fa-pause" hidden></button>
+        <button class="button js-mute-button fa fa-volume-up"></button>
+        <button class="button js-volume-button fa fa-volume-off" hidden></button>
+      </div>
+      <div class="viewing-control">
+        <div class="current-time js-current-time"></div>
+        <div class="dash"> --- </div>
+        <div class="duration js-duration"></div>
+      </div>
+      <div class="right-buttons">
+        <button class="button js-fullscreen-button fa fa-expand"></button>
+      </div>
     </div>
   </div>
   
